@@ -6,7 +6,7 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:43:37 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/17 19:06:11 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/18 14:14:31 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,4 @@ void	sort_Greater_Than_Five(t_node **stack_a, t_node **stack_b, int range)
 		pa(stack_a, stack_b);
 	}
 	free (table);
-}§
+}
