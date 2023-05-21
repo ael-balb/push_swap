@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   read_input.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/21 13:51:40 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:03:03 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+void	read_input(t_node **stack_a, t_node **stack_b)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
+	char	*str;
+
+	str = get_next_line(0);
+	while (str)
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+        if (!str)
+            return ;
+		actions_check(stack_a, stack_b, str);
+		free(str);
+		str = get_next_line(0);
 	}
-	return(i);
 }

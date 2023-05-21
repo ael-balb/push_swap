@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/21 12:30:04 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 16:54:28 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
-	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
-	}
-	return(i);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

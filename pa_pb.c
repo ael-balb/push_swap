@@ -6,11 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:28:55 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/08 17:51:30 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 17:42:15 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "push_swap.h"
 
 void    push_a_b(t_node **src, t_node **dst)
 {
@@ -19,7 +19,7 @@ void    push_a_b(t_node **src, t_node **dst)
     if(*src == NULL)
         return ;
     ptr = (*src)->next;
-    (*src)->data = *dst;
+    (*src)->next = *dst;
     *dst = *src;
     *src = ptr;
 }

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/21 12:53:52 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 12:55:35 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	find_small_nmbs(t_node *stack)
-{
-	int	i;
-	i = stack->data;
-	while(stack)
-	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
-	}
-	return(i);
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+# include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
+
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char *s1, char *s2);
+int		ft_strchr(char *str);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*get_next_line(int fd);
+
+#endif

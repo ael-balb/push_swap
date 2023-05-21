@@ -1,36 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_and_transfer_to_stack_b.c                     :+:      :+:    :+:   */
+/*   ft_cheking_nmbr_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 16:03:26 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:20 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/19 17:05:06 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:11:15 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	sort_and_transfer_to_stack_b(t_node **stack_a, t_node **stack_b, int *table, int range)
+void	error_msg(void)
+{
+	ft_putstr_fd("ERROR: Number is Invalid\n", 2);
+	exit (1);
+}
+
+void	checking_nmbr(char **str)
 {
 	int	i;
+	int	j;
+	int	checking;
 
 	i = 0;
-	while (*stack_a)
+	while (str[i])
 	{
-		if ((*stack_a)->data <= table[i])
+		j = 0;
+		if (str[i][j] == '-' || str[i][j] == '+')
 		{
-			pb(stack_a, stack_b);
-			rb(stack_b);
-			i++;
+			checking = ft_isdigit(str[i][++j]);
+			if (!checking)
+				error_msg();
 		}
-		else if ((*stack_a)->data > table[i] && (*stack_a)->data <= table[range + i])
+		while (str[i][j])
 		{
-			pb(stack_a, stack_b);
-			i++;
+			checking = ft_isdigit(str[i][j]);
+			if (!checking)
+				error_msg();
+			j++;
 		}
-		else
-			ra(stack_a);
+		i++;
 	}
 }

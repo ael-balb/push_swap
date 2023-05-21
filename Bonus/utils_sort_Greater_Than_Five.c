@@ -6,11 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:15:51 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:10 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 16:55:21 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	*sort_int_tab(int *table, int size)
 {

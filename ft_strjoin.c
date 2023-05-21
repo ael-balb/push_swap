@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/21 12:20:02 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 16:51:54 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include  "push_swap.h"
 
-int	find_small_nmbs(t_node *stack)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	str = malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str)
+		return (NULL);
+	while (s1[i])
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+		str[i] = s1[i];
+		i++;
 	}
-	return(i);
+	while (s2[j])
+	{
+		str[i] = s2[j];
+		j++;
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

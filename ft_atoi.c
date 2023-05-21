@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_and_transfer_to_stack_b.c                     :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 16:03:26 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:20 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/19 16:44:39 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:30:29 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_and_transfer_to_stack_b(t_node **stack_a, t_node **stack_b, int *table, int range)
+long	ft_atoi(char *str)
 {
-	int	i;
+	long	res;
+	int					a;
+	int					i;
 
+	a = 1;
+	res = 0;
 	i = 0;
-	while (*stack_a)
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' '))
+		i++;
+	if (str[i] == '-')
+		a = a * -1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if ((*stack_a)->data <= table[i])
-		{
-			pb(stack_a, stack_b);
-			rb(stack_b);
-			i++;
-		}
-		else if ((*stack_a)->data > table[i] && (*stack_a)->data <= table[range + i])
-		{
-			pb(stack_a, stack_b);
-			i++;
-		}
-		else
-			ra(stack_a);
+		res = res * 10 + (str[i] - '0');
+		i++;
 	}
+	if (res >= 9223372036854775807 && a > 0)
+		return (-1);
+	if (res > 9223372036854775807 && a < 0)
+		return (0);
+	return (res * a);
 }

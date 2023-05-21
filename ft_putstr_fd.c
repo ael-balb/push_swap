@@ -6,11 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:19:43 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/08 17:20:12 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 16:52:04 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "push_swap.h"
 
 void	ft_putstr_fd(char *str, int fd)
 {

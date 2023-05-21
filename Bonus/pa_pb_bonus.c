@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   pa_pb_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/08 17:28:55 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:05:10 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+void    push_a_b(t_node **src, t_node **dst)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
-	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
-	}
-	return(i);
+    t_node *ptr;
+
+    if(*src == NULL)
+        return ;
+    ptr = (*src)->next;
+    (*src)->next = *dst;
+    *dst = *src;
+    *src = ptr;
+}
+
+void    pa(t_node **stack_a, t_node **stack_b)
+{
+    push_a_b(stack_b, stack_a);
+}
+
+void    pb(t_node **stack_a, t_node **stack_b)
+{
+    push_a_b(stack_a, stack_b);
 }

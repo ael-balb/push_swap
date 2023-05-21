@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   put_max_nmbr_on_top.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/18 16:17:31 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:05:56 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+void	put_max_nmbr_on_top(t_node **stack_b)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
+	int	max;
+	int	size;
+
+	while (1)
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+		max = find_big_nmbs_index(*stack_b);
+		size = ft_length(*stack_b);
+		if (max == 0)
+			break ;
+		if (max > size / 2)
+			rrb(stack_b);
+		else if (max <= size / 2)
+			rb(stack_b);
 	}
-	return(i);
 }

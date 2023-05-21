@@ -6,11 +6,12 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:43:37 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 17:48:00 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 17:54:12 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
+
 void	sort_two_nmbs(t_node **stack)
 {
     if((*stack)->data > (*stack)->next->data)
@@ -44,6 +45,7 @@ void	sort_three_nmbs(t_node **stack)
 			rra(stack);
 		}
 	}
+	
 }
 
 void	sort_4nmbs_and_5nmbs(t_node **stack_a, t_node **stack_b)

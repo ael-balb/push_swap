@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra_rrb.c                                          :+:      :+:    :+:   */
+/*   rra_rrb_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:14:13 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:27 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 18:22:44 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	rra_rrb(t_node **stack)
 {
@@ -33,18 +33,15 @@ void	rra_rrb(t_node **stack)
 void	rra(t_node **a)
 {
 	rra_rrb(a);
-	ft_putstr_fd("rra\n", 1);
 }
 
 void	rrb(t_node **b)
 {
 	rra_rrb(b);
-	ft_putstr_fd("rrb\n", 1);
 }
 
 void	rrr(t_node **a, t_node **b)
 {
 	rra_rrb(a);
 	rra_rrb(b);
-	ft_putstr_fd("rrr\n", 1);
 }

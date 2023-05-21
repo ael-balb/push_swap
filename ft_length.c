@@ -6,11 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 11:33:54 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/18 16:27:03 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 16:52:09 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "push_swap.h"
 
 int	ft_length(t_node *stack)
 {

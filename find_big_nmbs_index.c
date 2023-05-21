@@ -6,11 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:33:49 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/18 16:39:29 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/21 16:52:36 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "push_swap.h"
 
 int	find_big_nmbs_index(t_node *stack_b)
 {

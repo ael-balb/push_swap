@@ -1,26 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   ft_cheking_nmbr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/19 17:05:06 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 18:10:50 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_small_nmbs(t_node *stack)
+void	error_msg(void)
+{
+	ft_putstr_fd("error: Number is Invalid\n", 2);
+	exit (1);
+}
+
+void	checking_nmbr(char **str)
 {
 	int	i;
-	i = stack->data;
-	while(stack)
+	int	j;
+	int	checking;
+
+	i = 0;
+	while (str[i])
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+		j = 0;
+		if (str[i][j] == '-' || str[i][j] == '+')
+		{
+			checking = ft_isdigit(str[i][++j]);
+			if (!checking)
+				error_msg();
+		}
+		while (str[i][j])
+		{
+			checking = ft_isdigit(str[i][j]);
+			if (!checking)
+				error_msg();
+			j++;
+		}
+		i++;
 	}
-	return(i);
 }

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/19 17:08:00 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 16:53:55 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+int	ft_isdigit(int c)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
-	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
-	}
-	return(i);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   sort_and_transfer_to_stack_b.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/18 16:03:26 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 16:55:15 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	find_small_nmbs(t_node *stack)
+void	sort_and_transfer_to_stack_b(t_node **stack_a, t_node **stack_b, int *table, int range)
 {
 	int	i;
-	i = stack->data;
-	while(stack)
+
+	i = 0;
+	while (*stack_a)
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+		if ((*stack_a)->data <= table[i])
+		{
+			pb(stack_a, stack_b);
+			rb(stack_b);
+			i++;
+		}
+		else if ((*stack_a)->data > table[i] && (*stack_a)->data <= table[range + i])
+		{
+			pb(stack_a, stack_b);
+			i++;
+		}
+		else
+			ra(stack_a);
 	}
-	return(i);
 }

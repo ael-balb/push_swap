@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_small_nmbs.c                                  :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 11:47:21 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:28 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/21 11:40:23 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/21 16:51:58 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_small_nmbs(t_node *stack)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
-	i = stack->data;
-	while(stack)
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!str)
+		return (0);
+	while (s1[i])
 	{
-		if(i > stack->data)
-			i = stack->data;
-		stack = stack->next;
+		str[i] = s1[i];
+		i++;
 	}
-	return(i);
+	str[i] = '\0';
+	return (str);
 }
