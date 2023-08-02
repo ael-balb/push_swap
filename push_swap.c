@@ -6,7 +6,7 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 11:15:22 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:41:23 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/27 18:47:03 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	sorted_stack(t_node **stack_a, t_node **stack_b)
 	else if (size > 3 && size < 6 && !verify_sorted(*stack_a))
 		sort_4nmbs_and_5nmbs(stack_a, stack_b);
 	else if (size <= 100 && !verify_sorted(*stack_a))
-		sort_Greater_Than_Five(stack_a, stack_b, 15);
+		sort_greater_than_five(stack_a, stack_b, 15);
 	else if (size <= 500 && !verify_sorted(*stack_a))
-		sort_Greater_Than_Five(stack_a, stack_b, 32);
+		sort_greater_than_five(stack_a, stack_b, 32);
 }
 
 char	*join_nmbs(char **str)

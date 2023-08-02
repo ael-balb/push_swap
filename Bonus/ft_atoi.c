@@ -6,7 +6,7 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:44:39 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:51:09 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:59:25 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 long	ft_atoi(char *str)
 {
 	long	res;
-	int					a;
-	int					i;
+	int		a;
+	int		i;
 
 	a = 1;
 	res = 0;

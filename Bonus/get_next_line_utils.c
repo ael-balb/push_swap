@@ -6,68 +6,11 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:57:05 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:19:17 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:21:20 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
-
-// char	*ft_strdup(const char *s1)
-// {
-// 	char	*str;
-// 	int		i;
-
-// 	i = 0;
-// 	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
-// 	if (!str)
-// 		return (0);
-// 	while (s1[i])
-// 	{
-// 		str[i] = s1[i];
-// 		i++;
-// 	}
-// 	str[i] = '\0';
-// 	return (str);
-// }
-
-// char	*ft_strjoin(char *s1, char *s2)
-// {
-// 	int		i;
-// 	int		j;
-// 	char	*str;
-
-// 	i = 0;
-// 	j = 0;
-// 	if (!s1 || !s2)
-// 		return (NULL);
-// 	str = malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
-// 	if (!str)
-// 		return (NULL);
-// 	while (s1[i])
-// 	{
-// 		str[i] = s1[i];
-// 		i++;
-// 	}
-// 	while (s2[j])
-// 	{
-// 		str[i] = s2[j];
-// 		j++;
-// 		i++;
-// 	}
-// 	str[i] = '\0';
-// 	free(s1);
-// 	return (str);
-// }
 
 int	ft_strchr(char *str)
 {

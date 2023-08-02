@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_max_nmbr_on_top.c                              :+:      :+:    :+:   */
+/*   ft_find_number_position.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 16:17:31 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:05:56 by ael-balb         ###   ########.fr       */
+/*   Created: 2023/05/23 15:37:11 by ael-balb          #+#    #+#             */
+/*   Updated: 2023/05/23 16:33:51 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "push_swap.h"
 
-void	put_max_nmbr_on_top(t_node **stack_b)
+int	ft_find_number_position(t_node *stack, int nmbr)
 {
-	int	max;
-	int	size;
+	int	i;
 
-	while (1)
+	i = 0;
+	while (stack->data != nmbr)
 	{
-		max = find_big_nmbs_index(*stack_b);
-		size = ft_length(*stack_b);
-		if (max == 0)
-			break ;
-		if (max > size / 2)
-			rrb(stack_b);
-		else if (max <= size / 2)
-			rb(stack_b);
+		i++;
+		stack = stack->next;
 	}
+	return (i);
 }

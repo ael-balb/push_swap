@@ -6,7 +6,7 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:39:03 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:28:26 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/27 18:10:09 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	charging_stack(t_node **stack_a, char **str)
 		nmbs = ft_atoi(str[i]);
 		if (nmbs < INT_MIN || nmbs > INT_MAX)
 		{
-			ft_putstr_fd("error: Number is Out of Range for Integer Values\n", 2);
+			ft_putstr_fd("error: Number is Out of", 2);
+			ft_putstr_fd(" Range for Integer Values\n", 2);
 			exit (1);
 		}
 		ft_add_node_back(stack_a, ft_new_node(nmbs));

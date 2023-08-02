@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_sort_Greater_Than_Five.c                     :+:      :+:    :+:   */
+/*   utils_sort_up_five.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:15:51 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:10 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:33:23 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int	*sort_int_tab(int *table, int size)
 	}
 	return (table);
 }
-int	*Copy_Stack_To_Table(t_node *stack_a)
+
+int	*copy_stack_to_table(t_node *stack_a)
 {
 	int	*table;
 	int	size;

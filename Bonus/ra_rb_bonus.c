@@ -6,7 +6,7 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:51:49 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 18:43:36 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:47:29 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	ra_rb(t_node **stack)
 {
-    t_node  *ptr;
-    t_node  *last_node;
+	t_node		*ptr;
+	t_node		*last_node;
 
-    if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
-    ptr = *stack;
-    *stack = (*stack)->next;
-    last_node = *stack; 
-    while(last_node->next != NULL)
-        last_node = last_node->next;
-    last_node->next = ptr;
-    ptr->next = NULL;
+	ptr = *stack;
+	*stack = (*stack)->next;
+	last_node = *stack;
+	while (last_node->next != NULL)
+		last_node = last_node->next;
+	last_node->next = ptr;
+	ptr->next = NULL;
 }
 
 void	ra(t_node **stack_a)

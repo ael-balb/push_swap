@@ -6,13 +6,14 @@
 /*   By: ael-balb <ael-balb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:03:26 by ael-balb          #+#    #+#             */
-/*   Updated: 2023/05/21 16:51:20 by ael-balb         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:05:34 by ael-balb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_and_transfer_to_stack_b(t_node **stack_a, t_node **stack_b, int *table, int range)
+void	sort_and_transfer_to_stack_b(t_node **stack_a,
+		t_node **stack_b, int *table, int range)
 {
 	int	i;
 
@@ -25,7 +26,8 @@ void	sort_and_transfer_to_stack_b(t_node **stack_a, t_node **stack_b, int *table
 			rb(stack_b);
 			i++;
 		}
-		else if ((*stack_a)->data > table[i] && (*stack_a)->data <= table[range + i])
+		else if ((*stack_a)->data > table[i]
+			&& (*stack_a)->data <= table[range + i])
 		{
 			pb(stack_a, stack_b);
 			i++;
